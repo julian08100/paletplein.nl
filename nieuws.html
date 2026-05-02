@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (imageEl) {
                 itemHTML += `
                 <div class="news-image-container">
-                    <img decoding="async" src="https://paletplein.nl/nieuws/${imageEl.src}" alt="${imageEl.alt || 'Nieuws afbeelding'}" class="news-image">
+                    <img decoding="async" src="${imageEl.getAttribute('src')}" alt="${imageEl.alt || 'Nieuws afbeelding'}" class="news-image">
                     ${subtextEl ? `<div class="news-date">${subtextEl.textContent}</div>` : ''}
                 </div>`;
             }
