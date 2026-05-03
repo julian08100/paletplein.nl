@@ -173,7 +173,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <link rel="icon" href="wp-content/uploads/2025/04/cropped-Logo-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="wp-content/uploads/2025/04/cropped-Logo-180x180.png" />
 <meta name="msapplication-TileImage" content="https://paletplein.nl/wp-content/uploads/2025/04/cropped-Logo-270x270.png" />
-    <script src="https://t.contentsquare.net/uxa/8c97f5ee65968.js"></script>
+    <script>(function(){if(localStorage.getItem('cs-consent')=='accepted'){var s=document.createElement('script');s.async=1;s.src='https://t.contentsquare.net/uxa/8c97f5ee65968.js';document.head.appendChild(s);}})();</script>
 </head>
 
 <body class="home wp-singular page-template page-template-page-no-title page page-id-40 wp-custom-logo wp-embed-responsive wp-theme-twentytwentyfive">
@@ -1336,6 +1336,27 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
     });
   });
 })();
+</script>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#203d89;color:#fff;padding:16px clamp(20px,5vw,40px);font-family:'AR One Sans',sans-serif;font-size:14px;line-height:1.5;box-shadow:0 -2px 20px rgba(0,0,0,0.15);">
+  <div style="max-width:1340px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
+    <p style="flex:1;margin:0;min-width:240px;">We gebruiken analytische cookies (ContentSquare) om onze website te verbeteren. Geen persoonsgegevens worden verkocht. <a href="privacybeleid.html" style="color:#fff;font-weight:600;">Lees meer</a></p>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button onclick="acceptCS()" style="background:#fff;color:#203d89;border:none;padding:10px 22px;border-radius:6px;cursor:pointer;font-weight:700;font-size:14px;font-family:inherit;">Accepteren</button>
+      <button onclick="declineCS()" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.45);padding:10px 22px;border-radius:6px;cursor:pointer;font-size:14px;font-family:inherit;">Weigeren</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner=document.getElementById('cookie-banner');
+  var c=localStorage.getItem('cs-consent');
+  if(!c) banner.style.display='block';
+  else if(c==='accepted'){var s=document.createElement('script');s.async=1;s.src='https://t.contentsquare.net/uxa/8c97f5ee65968.js';document.head.appendChild(s);}
+})();
+function acceptCS(){localStorage.setItem('cs-consent','accepted');document.getElementById('cookie-banner').style.display='none';var s=document.createElement('script');s.async=1;s.src='https://t.contentsquare.net/uxa/8c97f5ee65968.js';document.head.appendChild(s);}
+function declineCS(){localStorage.setItem('cs-consent','declined');document.getElementById('cookie-banner').style.display='none';}
 </script>
 </body>
 </html>
