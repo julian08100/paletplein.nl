@@ -1,56 +1,162 @@
 <!DOCTYPE html>
 <html lang="nl-NL">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacybeleid — Paletplein</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://t.contentsquare.net/uxa/8c97f5ee65968.js"></script>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'AR One Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #111; background: #fff; }
-        a { color: #203d89; }
-        a:hover { text-decoration: none; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacybeleid &#8211; Paletplein</title>
+<script src="https://t.contentsquare.net/uxa/8c97f5ee65968.js"></script>
+<link rel='stylesheet' href='wp-includes/blocks/navigation/style.min.css' media='all' />
+<link rel='stylesheet' href='wp-content/themes/twentytwentyfive/style.css' media='all' />
+<style>
+@font-face{font-family:Futura;font-style:normal;font-weight:400;font-display:fallback;src:url('wp-content/uploads/fonts/futura-medium-bt.ttf') format('truetype');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:400;font-display:fallback;src:url('wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWn_9DWg3no5mBF4.woff2') format('woff2');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:500;font-display:fallback;src:url('wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWk39DWg3no5mBF4.woff2') format('woff2');}
+@font-face{font-family:"AR One Sans";font-style:normal;font-weight:700;font-display:fallback;src:url('wp-content/uploads/fonts/TUZezwhrmbFp0Srr_tH6fv6RcUejHO_u7GF5aXfv-U2QzBLF6gslWpj6DWg3no5mBF4.woff2') format('woff2');}
 
-        .site-header { background: #fff; border-bottom: 1px solid #e8e8e8; padding: 16px clamp(20px, 5vw, 50px); display: flex; align-items: center; }
-        .site-header img { height: 40px; width: auto; display: block; }
+/* CSS vars + base styles from global-styles */
+:root{--wp--preset--color--base:#FFFFFF;--wp--preset--color--contrast:#111111;--wp--preset--color--custom-zwart:#000;--wp--preset--color--custom-wit:#ffffff;--wp--preset--color--custom-rood:#dc2206;--wp--preset--color--custom-blauw:#203d89;--wp--preset--color--custom-lichtrood:#ea917f;--wp--preset--color--custom-lichtblauw:#8f9fc4;--wp--preset--font-size--small:0.875rem;--wp--preset--font-size--medium:clamp(1rem,1rem + ((1vw - 0.2rem)*0.196),1.125rem);--wp--preset--font-size--large:clamp(1.125rem,1.125rem + ((1vw - 0.2rem)*0.392),1.375rem);--wp--preset--font-size--x-large:clamp(1.75rem,1.75rem + ((1vw - 0.2rem)*0.392),2rem);--wp--preset--font-size--xx-large:clamp(2.15rem,2.15rem + ((1vw - 0.2rem)*1.333),3rem);--wp--preset--font-family--futura:Futura;--wp--preset--font-family--ar-one-sans:"AR One Sans",sans-serif;--wp--preset--spacing--20:10px;--wp--preset--spacing--30:20px;--wp--preset--spacing--40:30px;--wp--preset--spacing--50:clamp(30px,5vw,50px);--wp--preset--spacing--60:clamp(30px,7vw,70px);--wp--preset--spacing--70:clamp(50px,7vw,90px);--wp--preset--spacing--80:clamp(70px,10vw,140px);--wp--style--global--content-size:645px;--wp--style--global--wide-size:1340px;}
+:where(body){margin:0;}
+body{background-color:#fff;color:#111;font-family:"AR One Sans",sans-serif;font-size:var(--wp--preset--font-size--large);font-weight:400;letter-spacing:-0.1px;line-height:1.4;--wp--style--root--padding-top:0px;--wp--style--root--padding-right:var(--wp--preset--spacing--50);--wp--style--root--padding-bottom:0px;--wp--style--root--padding-left:var(--wp--preset--spacing--50);}
+a:where(:not(.wp-element-button)){color:#203d89;font-family:"AR One Sans",sans-serif;text-decoration:underline;}
+:root :where(a:where(:not(.wp-element-button)):hover){text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-family:Futura,sans-serif;font-style:normal;font-weight:400;letter-spacing:-0.1px;line-height:1.13;}
+h1{font-size:var(--wp--preset--font-size--xx-large);font-weight:700;}
+h2{font-size:var(--wp--preset--font-size--x-large);font-weight:300;}
+h3{font-size:var(--wp--preset--font-size--large);}
 
-        .page-hero { background: #f4f6fb; border-bottom: 3px solid #203d89; padding: 56px clamp(20px, 5vw, 50px) 44px; }
-        .page-hero h1 { font-size: clamp(26px, 5vw, 44px); font-weight: 700; letter-spacing: -.02em; color: #203d89; }
-        .page-hero .meta { margin-top: 10px; font-size: 13px; color: #777; }
+/* Layout utilities */
+.wp-site-blocks{padding-top:var(--wp--style--root--padding-top);padding-bottom:var(--wp--style--root--padding-bottom);}
+.has-global-padding{padding-right:var(--wp--style--root--padding-right);padding-left:var(--wp--style--root--padding-left);}
+.has-global-padding>.alignfull{margin-right:calc(var(--wp--style--root--padding-right)*-1);margin-left:calc(var(--wp--style--root--padding-left)*-1);}
+body .is-layout-flex{display:flex;}.is-layout-flex{flex-wrap:wrap;align-items:center;}.is-layout-flex>:is(*,div){margin:0;}
+.is-layout-constrained>:where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:var(--wp--style--global--content-size);margin-left:auto!important;margin-right:auto!important;}
+.is-layout-constrained>.alignwide{max-width:var(--wp--style--global--wide-size);}
+:root :where(.is-layout-flex){gap:1.2rem;}
+:where(.wp-site-blocks)>*{margin-block-start:1.2rem;margin-block-end:0;}
+:where(.wp-site-blocks)>:first-child{margin-block-start:0;}
+:root :where(.is-layout-flow)>:first-child{margin-block-start:0;}
+:root :where(.is-layout-flow)>:last-child{margin-block-end:0;}
+:root :where(.is-layout-flow)>*{margin-block-start:1.2rem;margin-block-end:0;}
 
-        main { max-width: 760px; margin: 0 auto; padding: 60px clamp(20px, 5vw, 40px) 100px; }
+/* Color utilities used in header */
+.has-custom-blauw-background-color{background-color:#203d89!important;}
+.has-custom-blauw-color{color:#203d89!important;}
+.has-custom-wit-color{color:#fff!important;}
+.has-custom-rood-color{color:#dc2206!important;}
+.has-custom-wit-background-color{background-color:#fff!important;}
+.has-base-background-color{background-color:#fff!important;}
+.has-contrast-color{color:#111!important;}
+.has-text-color{} .has-background{} .has-link-color{}
+.has-medium-font-size{font-size:var(--wp--preset--font-size--medium)!important;}
+.has-large-font-size{font-size:var(--wp--preset--font-size--large)!important;}
+.has-small-font-size{font-size:var(--wp--preset--font-size--small)!important;}
 
-        h2 { font-size: 19px; font-weight: 700; color: #203d89; margin: 44px 0 12px; padding-bottom: 10px; border-bottom: 2px solid #e4e8f4; }
-        h3 { font-size: 14px; font-weight: 700; color: #dc2206; text-transform: uppercase; letter-spacing: .06em; margin: 24px 0 8px; }
-        p { color: #444; margin-bottom: 14px; }
-        p strong { color: #111; font-weight: 600; }
-        ul { list-style: disc; padding-left: 22px; margin-bottom: 14px; }
-        li { color: #444; margin-bottom: 6px; }
+/* Layout group/columns utilities */
+.wp-block-group{box-sizing:border-box;}
+.alignfull{margin-right:0;margin-left:0;max-width:none;width:100%;}
+.alignwide{max-width:var(--wp--style--global--wide-size);}
+.is-nowrap{flex-wrap:nowrap!important;}
+.is-content-justification-space-between{justify-content:space-between;}
+.is-content-justification-right{justify-content:flex-end;}
+.is-position-sticky{position:sticky;top:0;z-index:100;}
 
-        .callout { background: #f4f6fb; border-left: 3px solid #203d89; padding: 14px 18px; margin: 20px 0; border-radius: 0 4px 4px 0; }
-        .callout p { margin: 0; font-size: 14px; }
+/* Site logo */
+.wp-block-site-logo{box-sizing:border-box;line-height:0;}
+.wp-block-site-logo a{display:inline-block;line-height:0;}
+.wp-block-site-logo img{height:auto;max-width:100%;}
 
-        footer { background: #203d89; color: rgba(255,255,255,0.7); text-align: center; padding: 28px clamp(20px, 5vw, 40px); font-size: 13px; }
-        footer a { color: #fff; }
-    </style>
+/* Social links */
+.wp-block-social-links{background:none;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0;}
+.wp-block-social-links .wp-social-link svg{height:1em;width:1em;}
+.wp-block-social-links,.wp-block-social-links.has-normal-icon-size{font-size:24px;}
+.wp-block-social-link{border-radius:9999px;display:block;}
+.wp-block-social-link a{align-items:center;display:flex;line-height:0;}
+.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0;}
+:root :where(.wp-block-social-links .wp-social-link a){padding:.25em;}
+.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none;}
+.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:active,.wp-block-social-links .wp-social-link a:hover,.wp-block-social-links .wp-social-link a:visited{color:currentColor;fill:currentColor;}
+.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important;}
+
+/* Navigation link */
+.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word;}
+
+/* Header custom styles */
+.header-logo{line-height:0;}
+.header-tekst .wp-block-navigation-item__content{text-decoration:none;}
+
+/* Custom menu open styles */
+.wp-block-navigation__responsive-container.is-menu-open{background-color:#ffffff!important;color:#203D89!important;padding:0!important;width:100%!important;max-width:100vw!important;height:120vh!important;position:fixed!important;top:-20vh!important;left:0!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;justify-content:center!important;animation:slideFadeIn 0.5s ease-out!important;z-index:1000!important;box-sizing:border-box!important;}
+@keyframes slideFadeIn{from{opacity:0;transform:translateY(30px) scale(0.98);}to{opacity:1;transform:translateY(0) scale(1);}}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important;overflow-y:auto!important;}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close{margin-right:20px!important;}
+.wp-block-navigation__responsive-container.is-menu-open ul{list-style:none!important;padding:0!important;margin:0!important;width:100%!important;max-width:100%!important;}
+.wp-block-navigation__responsive-container.is-menu-open li{width:100%!important;margin:0!important;padding:0!important;max-width:100%!important;}
+.wp-block-navigation__responsive-container.is-menu-open a{display:block!important;width:100%!important;max-width:100%!important;padding:18px 20px!important;font-size:clamp(18px,4.5vw,24px)!important;font-weight:700!important;text-align:left!important;color:#203D89!important;background-color:#ffffff!important;border-bottom:1px solid #f0f0f0!important;text-decoration:none!important;outline:none!important;border:none!important;box-shadow:none!important;word-wrap:break-word!important;overflow-wrap:break-word!important;box-sizing:border-box!important;}
+.wp-block-navigation__responsive-container.is-menu-open li:first-child a{border:none!important;outline:none!important;box-shadow:none!important;}
+.wp-block-navigation__responsive-container.is-menu-open a:hover{background-color:#203D89!important;color:#ffffff!important;}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content[aria-current="page"]{background-color:#DC2206!important;color:#ffffff!important;}
+@media(max-width:480px){.wp-block-navigation__responsive-container.is-menu-open a{padding:15px 16px!important;font-size:clamp(16px,4vw,20px)!important;}}
+html.is-menu-open{overflow-x:hidden!important;}
+
+/* Privacy content styles */
+.privacy-content{max-width:760px;margin:0 auto;padding:60px clamp(20px,5vw,40px) 100px;}
+.privacy-content h1{color:#203d89;margin-bottom:8px;}
+.privacy-content .meta{font-size:var(--wp--preset--font-size--small);color:#777;margin-bottom:48px;}
+.privacy-content h2{color:#203d89;margin:44px 0 12px;padding-bottom:10px;border-bottom:2px solid #e4e8f4;font-weight:600;}
+.privacy-content h3{font-size:14px;font-weight:700;color:#dc2206;text-transform:uppercase;letter-spacing:.06em;margin:24px 0 8px;font-family:"AR One Sans",sans-serif;}
+.privacy-content p{color:#444;margin-bottom:14px;}
+.privacy-content p strong{color:#111;font-weight:600;}
+.privacy-content ul{list-style:disc;padding-left:22px;margin-bottom:14px;}
+.privacy-content li{color:#444;margin-bottom:6px;}
+.privacy-content .callout{background:#f4f6fb;border-left:3px solid #203d89;padding:14px 18px;margin:20px 0;border-radius:0 4px 4px 0;}
+.privacy-content .callout p{margin:0;font-size:14px;}
+</style>
 </head>
 <body>
 
-<header class="site-header">
-    <a href="index.html">
-        <img src="wp-content/uploads/2025/04/Paletplein-logo-2019_Tekengebied-1.png" alt="Paletplein" width="140" height="46">
-    </a>
-</header>
-
-<div class="page-hero">
-    <h1>Privacybeleid</h1>
-    <p class="meta">Laatste update: mei 2025 &nbsp;·&nbsp; paletplein.nl</p>
+<div class="wp-site-blocks"><header class="wp-block-template-part">
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group has-custom-blauw-background-color has-background is-layout-flow wp-block-group-is-layout-flow" style="min-height:0px;margin-top:0;margin-bottom:0;padding-top:2px;padding-right:6%;padding-bottom:2px;padding-left:6%">
+<p class="has-text-align-right has-custom-wit-color has-text-color has-link-color" style="font-size:0.8rem"><em>Meer dan 50 jaar het bruisende hart van de wijk</em></p>
 </div>
 
-<main>
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained is-position-sticky">
+<div class="wp-block-group alignwide is-content-justification-space-between is-nowrap is-layout-flex wp-block-group-is-layout-flex" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><div class="header-logo wp-block-site-logo"><a href="index.html" class="custom-logo-link" rel="home"><img width="140" height="46" src="wp-content/uploads/2025/04/Paletplein-logo-2019_Tekengebied-1.png" class="custom-logo" alt="Paletplein" decoding="async" /></a></div>
+
+<div class="wp-block-group has-medium-font-size is-content-justification-right is-nowrap is-layout-flex wp-block-group-is-layout-flex">
+<ul class="wp-block-social-links has-icon-color has-icon-background-color is-nowrap is-layout-flex wp-block-social-links-is-layout-flex"><li style="color:#dc2206;background-color:#ffffff;" class="wp-social-link wp-social-link-instagram has-custom-rood-color has-custom-wit-background-color wp-block-social-link"><a href="https://www.instagram.com/paletplein/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
+<li style="color:#dc2206;background-color:#ffffff;" class="wp-social-link wp-social-link-facebook has-custom-rood-color has-custom-wit-background-color wp-block-social-link"><a href="https://www.facebook.com/Paletplein/?locale=nl_NL" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li></ul>
+
+<nav class="has-text-color has-custom-blauw-color has-medium-font-size header-tekst wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label="Header menu"><ul class="wp-block-navigation__container has-text-color has-custom-blauw-color has-medium-font-size header-tekst wp-block-navigation has-medium-font-size"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-medium-font-size has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="winkels/"><span class="wp-block-navigation-item__label">Winkels</span></a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Winkels submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container has-text-color has-custom-blauw-color wp-block-navigation-submenu"><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="ac-ap/"><span class="wp-block-navigation-item__label">AC-AP</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="afhaalcentrum-welkom/"><span class="wp-block-navigation-item__label">Afhaalcentrum Welkom</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="albert-heijn/"><span class="wp-block-navigation-item__label">Albert Heijn</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="aldi/"><span class="wp-block-navigation-item__label">Aldi</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="asm-west/"><span class="wp-block-navigation-item__label">ASM West</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="bakkerij-floor-van-lieshout/"><span class="wp-block-navigation-item__label">Bakkerij Floor van Lieshout</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="beauty-center-annabell/"><span class="wp-block-navigation-item__label">Beauty Center Annabell</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="broodje-palet-meer/"><span class="wp-block-navigation-item__label">Broodje Palet &amp; Meer</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="budoshop-teejoos/"><span class="wp-block-navigation-item__label">Budoshop TeeJooS</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="de-haas-opticien/"><span class="wp-block-navigation-item__label">De Haas Opticien</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="dodeka-ink.html"><span class="wp-block-navigation-item__label">Dodeka ink</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="dominos/"><span class="wp-block-navigation-item__label">Domino's</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="eethuis-paletplein/"><span class="wp-block-navigation-item__label">Eethuis Paletplein</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="kapper013/"><span class="wp-block-navigation-item__label">Kapper013</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="kleding-atelier-palet/"><span class="wp-block-navigation-item__label">Kleding Atelier Palet</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="kokkys/"><span class="wp-block-navigation-item__label">Kokky's Kappers</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="pets-place/"><span class="wp-block-navigation-item__label">Pets Place</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="rijwielhandel-ton-van-de-klundert/"><span class="wp-block-navigation-item__label">Rijwielhandel Ton van de Klundert</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="snackbar-paletplein/"><span class="wp-block-navigation-item__label">Snackbar Paletplein</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="kaaspalet.html"><span class="wp-block-navigation-item__label">Speciaalzaak &#8217;t Kaaspalet</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="tons-salon/"><span class="wp-block-navigation-item__label">T'Ons Salon</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="thelmas-toko/"><span class="wp-block-navigation-item__label">Thelma's Toko</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="trekpleister/"><span class="wp-block-navigation-item__label">Trekpleister</span></a></li><li class="has-medium-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="warszawa/"><span class="wp-block-navigation-item__label">Warszawa</span></a></li></ul></li></ul></nav>
+
+<nav class="has-text-color has-custom-blauw-color has-large-font-size is-responsive items-justified-right header-tekst wp-block-navigation is-content-justification-right is-layout-flex wp-block-navigation-is-layout-flex" aria-label="Navigatie"
+     data-wp-interactive="core/navigation" data-wp-context='{"overlayOpenedBy":{"click":false,"hover":false,"focus":false},"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'><button aria-haspopup="dialog" aria-label="Menu openen" class="wp-block-navigation__responsive-container-open always-shown"
+        data-wp-on--click="actions.openMenuOnClick"
+        data-wp-on--keydown="actions.handleMenuKeydown"
+    ><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 5v1.5h14V5H5z"></path><path d="M5 12.8h14v-1.5H5v1.5z"></path><path d="M5 19h14v-1.5H5V19z"></path></svg></button>
+        <div class="wp-block-navigation__responsive-container hidden-by-default has-text-color has-contrast-color has-background has-base-background-color" id="modal-1"
+        data-wp-class--has-modal-open="state.isMenuOpen"
+        data-wp-class--is-menu-open="state.isMenuOpen"
+        tabindex="-1">
+            <div class="wp-block-navigation__responsive-close" tabindex="-1">
+                <div class="wp-block-navigation__responsive-dialog">
+                    <button aria-label="Menu sluiten" class="wp-block-navigation__responsive-container-close"
+        data-wp-on--click="actions.closeMenuOnClick"
+    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="m13.06 12 6.47-6.47-1.06-1.06L12 10.94 5.53 4.47 4.47 5.53 10.94 12l-6.47 6.47 1.06 1.06L12 13.06l6.47 6.47 1.06-1.06L13.06 12Z"></path></svg></button>
+                    <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
+                        <ul class="wp-block-navigation__container has-text-color has-custom-blauw-color has-large-font-size is-responsive items-justified-right header-tekst wp-block-navigation has-large-font-size"><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="index.html"><span class="wp-block-navigation-item__label">Home</span></a></li><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="winkels/"><span class="wp-block-navigation-item__label">Winkels</span></a></li><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="stempelactie/"><span class="wp-block-navigation-item__label">Stempelactie</span></a></li><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="nieuws/"><span class="wp-block-navigation-item__label">Nieuws</span></a></li><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="locatie/"><span class="wp-block-navigation-item__label">Locatie</span></a></li><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="onze-geschiedenis/"><span class="wp-block-navigation-item__label">Onze geschiedenis</span></a></li><li class="has-large-font-size wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="privacybeleid.html" aria-current="page"><span class="wp-block-navigation-item__label">Privacybeleid</span></a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div></nav></div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="privacy-content">
+    <h1>Privacybeleid</h1>
+    <p class="meta">Laatste update: mei 2025 &nbsp;·&nbsp; paletplein.nl</p>
 
     <h2>1. Wie zijn wij</h2>
     <p>Dit is de website van <strong>Paletplein</strong>, het bruisende winkelhart van de wijk. De website is bereikbaar via paletplein.nl. Voor vragen over dit privacybeleid kunt u contact opnemen via de contactgegevens onderaan deze pagina.</p>
@@ -68,10 +174,10 @@
         <li><strong>Bezochte pagina's</strong> — welke pagina's worden bekeken en in welke volgorde</li>
     </ul>
     <p><strong>Doel:</strong> verbetering van het ontwerp en de gebruiksvriendelijkheid van deze website.</p>
-    <p><strong>Grondslag (AVG):</strong> gerechtvaardigd belang (artikel 6 lid 1 sub f AVG) — verbetering van de website ten behoeve van bezoekers. U kunt te allen tijde bezwaar maken (zie sectie 5).</p>
+    <p><strong>Grondslag (AVG):</strong> gerechtvaardigd belang (artikel 6 lid 1 sub f AVG). U kunt te allen tijde bezwaar maken (zie sectie 5).</p>
 
     <div class="callout">
-        <p><strong>Afmelden voor ContentSquare:</strong> Bezoek <a href="https://contentsquare.com/privacy-center/" target="_blank" rel="noopener">contentsquare.com/privacy-center</a> om u permanent af te melden voor ContentSquare-tracking op alle websites.</p>
+        <p><strong>Afmelden voor ContentSquare:</strong> Bezoek <a href="https://contentsquare.com/privacy-center/" target="_blank" rel="noopener">contentsquare.com/privacy-center</a> om u permanent af te melden.</p>
     </div>
 
     <h2>3. Cookies</h2>
@@ -81,32 +187,26 @@
         <li><strong>_cs_s</strong> — bevat sessiedata (30 minuten)</li>
         <li><strong>_cs_vars</strong> — slaat aangepaste variabelen op voor de sessie (sessieduur)</li>
     </ul>
-    <p>Wij gebruiken geen andere tracking- of marketingcookies. Functionele en technische cookies die noodzakelijk zijn voor de werking van de website worden niet beschouwd als persoonsgegevensverwerkende cookies.</p>
+    <p>Wij gebruiken geen andere tracking- of marketingcookies.</p>
 
     <h2>4. Derden</h2>
-    <p>Wij delen gegevens met de volgende derde partij als verwerker:</p>
     <ul>
-        <li>
-            <strong>ContentSquare SAS</strong> — 7 rue de Madrid, 75008 Parijs, Frankrijk (gevestigd in de EU).
-            ContentSquare verwerkt geanonimiseerde gedragsdata. Als EU-gevestigde verwerker blijft de data binnen de EU.
-            Meer informatie: <a href="https://contentsquare.com/privacy-center/" target="_blank" rel="noopener">ContentSquare Privacy Center</a>.
-        </li>
+        <li><strong>ContentSquare SAS</strong> — 7 rue de Madrid, 75008 Parijs, Frankrijk. Meer informatie: <a href="https://contentsquare.com/privacy-center/" target="_blank" rel="noopener">ContentSquare Privacy Center</a>.</li>
     </ul>
     <p>Wij verkopen, verhuren of verhandelen geen persoonsgegevens aan derden.</p>
 
     <h2>5. Uw rechten onder de AVG</h2>
-    <p>Als betrokkene heeft u de volgende rechten:</p>
     <ul>
-        <li><strong>Recht op inzage (art. 15)</strong> — opvragen welke gegevens wij van u hebben</li>
-        <li><strong>Recht op rectificatie (art. 16)</strong> — correctie van onjuiste gegevens</li>
-        <li><strong>Recht op verwijdering (art. 17)</strong> — verwijdering van uw gegevens</li>
-        <li><strong>Recht op beperking (art. 18)</strong> — beperking van de verwerking</li>
-        <li><strong>Recht op bezwaar (art. 21)</strong> — bezwaar maken tegen verwerking op basis van gerechtvaardigd belang</li>
+        <li><strong>Recht op inzage (art. 15)</strong></li>
+        <li><strong>Recht op rectificatie (art. 16)</strong></li>
+        <li><strong>Recht op verwijdering (art. 17)</strong></li>
+        <li><strong>Recht op beperking (art. 18)</strong></li>
+        <li><strong>Recht op bezwaar (art. 21)</strong></li>
     </ul>
-    <p>Stuur uw verzoek naar <a href="mailto:info@paletplein.nl">info@paletplein.nl</a>. Wij reageren binnen 30 dagen.</p>
+    <p>Stuur uw verzoek naar <a href="mailto:j.de.haas@digitalcc.nl">j.de.haas@digitalcc.nl</a>. Wij reageren binnen 30 dagen.</p>
 
     <div class="callout">
-        <p><strong>Klacht indienen:</strong> Als u van mening bent dat wij uw gegevens onrechtmatig verwerken, kunt u een klacht indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
+        <p><strong>Klacht indienen:</strong> <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a></p>
     </div>
 
     <h2>6. Wijzigingen</h2>
@@ -115,14 +215,71 @@
     <h2>7. Contact</h2>
     <ul>
         <li><strong>Website:</strong> <a href="index.html">paletplein.nl</a></li>
-        <li><strong>E-mail:</strong> <a href="mailto:info@paletplein.nl">info@paletplein.nl</a></li>
+        <li><strong>E-mail:</strong> <a href="mailto:j.de.haas@digitalcc.nl">j.de.haas@digitalcc.nl</a></li>
     </ul>
+</div>
 
-</main>
+<footer class="wp-block-template-part">
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--50)">
+<div class="wp-block-group alignwide is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group alignfull is-content-justification-space-between is-layout-flex wp-block-group-is-layout-flex">
+<div style="flex-basis:100%"><h2 class="wp-block-site-title has-text-color has-custom-blauw-color" style="font-size:var(--wp--preset--font-size--x-large)"><a href="index.html" target="_self" rel="home" style="color:#203d89;text-decoration:none;">Paletplein</a></h2>
+<p class="wp-block-site-tagline">Meer dan 50 jaar het bruisende hart van de wijk</p>
+<ul class="wp-block-social-links has-icon-color has-icon-background-color is-nowrap is-layout-flex wp-block-social-links-is-layout-flex"><li style="color:#dc2206;background-color:#ffffff;" class="wp-social-link wp-social-link-instagram has-custom-rood-color has-custom-wit-background-color wp-block-social-link"><a href="https://www.instagram.com/paletplein/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
+<li style="color:#dc2206;background-color:#ffffff;" class="wp-social-link wp-social-link-facebook has-custom-rood-color has-custom-wit-background-color wp-block-social-link"><a href="https://www.facebook.com/Paletplein/?locale=nl_NL" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li></ul>
+</div>
+</div>
 
-<footer>
-    <p>&copy; 2025 Paletplein. Alle rechten voorbehouden. &nbsp;·&nbsp; <a href="privacybeleid.html">Privacybeleid</a></p>
+<div class="wp-block-group is-nowrap is-layout-flex wp-block-group-is-layout-flex"><nav class="is-vertical wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex" aria-label="Menu"><ul class="wp-block-navigation__container is-vertical wp-block-navigation"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="winkels/"><span class="wp-block-navigation-item__label">Winkels</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="nieuws/"><span class="wp-block-navigation-item__label">Nieuws</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="stempelactie/"><span class="wp-block-navigation-item__label">Stempelactie</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="onze-geschiedenis/"><span class="wp-block-navigation-item__label">Onze geschiedenis</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="locatie/"><span class="wp-block-navigation-item__label">Locatie</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="privacybeleid.html" aria-current="page"><span class="wp-block-navigation-item__label">Privacybeleid</span></a></li></ul></nav></div>
+
+<div style="height:12px" aria-hidden="true"></div>
+
+<div class="wp-block-group alignfull is-content-justification-space-between is-layout-flex wp-block-group-is-layout-flex">
+<p class="has-small-font-size">Website door <a href="http://matsvandeijck.com">Mats van Deijck</a> &nbsp;·&nbsp; <a href="privacybeleid.html">Privacybeleid</a></p>
+</div>
+</div>
+</div>
 </footer>
+</div>
 
+<script>
+(function() {
+  var openBtn = document.querySelector('.wp-block-navigation__responsive-container-open.always-shown');
+  var closeBtn = document.querySelector('.wp-block-navigation__responsive-container-close');
+  var modal = document.getElementById('modal-1');
+
+  if (openBtn && modal) {
+    openBtn.addEventListener('click', function() {
+      modal.classList.add('is-menu-open', 'has-modal-open');
+      document.documentElement.classList.add('has-modal-open');
+    });
+  }
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', function() {
+      modal.classList.remove('is-menu-open', 'has-modal-open');
+      document.documentElement.classList.remove('has-modal-open');
+    });
+  }
+
+  var toggleBtns = document.querySelectorAll('.wp-block-navigation-submenu__toggle');
+  toggleBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.wp-block-navigation-submenu__toggle[aria-expanded="true"]').forEach(function(b) {
+        if (b !== btn) b.setAttribute('aria-expanded', 'false');
+      });
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+  });
+
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.wp-block-navigation-submenu__toggle[aria-expanded="true"]').forEach(function(btn) {
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
 </body>
 </html>
