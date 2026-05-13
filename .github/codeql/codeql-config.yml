@@ -1,5 +1,5 @@
 name: CodeQL config
 paths-ignore:
-  - wp-content
-  - wp-includes
-  - wp-json
+  - 'wp-content/**'
+  - 'wp-includes/**'
+  - 'wp-json/**'
